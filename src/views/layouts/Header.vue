@@ -1,12 +1,39 @@
 <template>
+<div>
   <v-app-bar
     class="header position-fixed"
     app
     color="rgba(0, 0, 0, 0.3)"
     dark
   >
-    <v-app-bar-nav-icon class="d-sm-none"></v-app-bar-nav-icon>
+    <!-- SP表示 -->
+    <v-app-bar-nav-icon class="ml-auto d-sm-none" @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
+    <v-navigation-drawer v-model="drawer" height="100vh" right fixed dark hide-overlay>
+      <v-list class="text-center">
+        <v-list-item to="/" link>
+          <v-list-item-content>
+            <v-list-item-title>Home</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+        <v-list-item to="/about" link>
+          <v-list-item-content>
+            <v-list-item-title>About</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+        <v-list-item to="/skills" link>
+          <v-list-item-content>
+            <v-list-item-title>Skills</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+        <v-list-item to="/works" link>
+          <v-list-item-content>
+            <v-list-item-title>Works</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+      </v-list>
+    </v-navigation-drawer>
 
+    <!-- PC表示 -->
     <v-toolbar-title class="d-none d-sm-block text-sm-h4">
       <router-link to="/" class="white--text">Portfolio</router-link>
       </v-toolbar-title>
@@ -22,10 +49,16 @@
     </nav>
 
   </v-app-bar>
+</div>
 </template>
 
 <script>
   export default {
+    data() {
+      return {
+        drawer: null
+      }
+    }
     
   }
 </script>
