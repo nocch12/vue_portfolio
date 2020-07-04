@@ -50,7 +50,7 @@ export default {
   .page-left-leave-active,
   .page-right-enter-active,
   .page-right-leave-active {
-    transition: .5s!important;
+    transition: .4s!important;
   }
 
   .page-left-enter-to,
@@ -66,13 +66,13 @@ export default {
 
   .page-left-leave-to,
   .page-right-enter {
-    transform: translate(100px, 0);
+    transform: translate(-100px, 0);
     opacity: 0;
   }
 
   .page-left-enter,
   .page-right-leave-to {
-    transform: translate(-100px, 0);
+    transform: translate(100px, 0);
     opacity: 0;
   }
 </style>
