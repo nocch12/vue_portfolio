@@ -7,7 +7,9 @@
   >
     <v-app-bar-nav-icon class="d-sm-none"></v-app-bar-nav-icon>
 
-    <v-toolbar-title class="d-none d-sm-block text-sm-h4">Portfolio</v-toolbar-title>
+    <v-toolbar-title class="d-none d-sm-block text-sm-h4">
+      <router-link to="/" class="white--text">Portfolio</router-link>
+      </v-toolbar-title>
     <nav class="d-none d-sm-block ml-auto global-nav">
       <ul class="d-flex global-nav-items">
         <li>
@@ -31,6 +33,10 @@
 <style lang="scss" scoped>
   .header {
     opacity: .9;
+    
+    a {
+      text-decoration: none;
+    }
   }
 
   .global-nav {
@@ -38,11 +44,11 @@
      
      &-items {
        height: 100%;
+       display: block;
        align-items: center;
      }
 
     a {
-      text-decoration: none;
       position: relative;
 
       &::after {
@@ -57,7 +63,7 @@
         visibility: hidden;
         transition: .3s;
       }
-
+      
       &.router-link-exact-active::after,
       &:hover::after {
         bottom: -4px;
