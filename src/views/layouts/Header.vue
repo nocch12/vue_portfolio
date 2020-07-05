@@ -8,7 +8,7 @@
   >
     <!-- SP表示 -->
     <v-app-bar-nav-icon class="ml-auto d-sm-none" @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
-    <v-navigation-drawer v-model="drawer" height="100vh" right fixed dark hide-overlay>
+    <v-navigation-drawer class="d-sm-none" v-model="drawer" height="100vh" right fixed dark hide-overlay>
       <v-list class="text-center">
         <v-list-item to="/" link>
           <v-list-item-content>
