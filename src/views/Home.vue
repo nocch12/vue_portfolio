@@ -3,8 +3,8 @@
     <v-main>
       <v-container>
         <section class="main-text">
-          <h1 class="text-center text-h1 mb-5-xs mb-sm-10">Kohki Ohno</h1>
-          <h2 class="text-center text-h2 mb-5-xs mb-sm-10">Portfolio Site</h2>
+          <h1 class="text-center text-h2 text-sm-h1 mb-10">Kohki Ohno</h1>
+          <h2 class="text-center text-h4 text-sm-h2 mb-5-xs mb-sm-10">Portfolio Site</h2>
         </section>
       </v-container>
     </v-main>
